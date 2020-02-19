@@ -1312,7 +1312,7 @@ Output:Meter,
     Double Pane Window,  !- Construction Name
     841F1E,  !- Building Surface Name
     ,  !- Outside Boundary Condition Object
-    ,  !- View Factor to Ground
+    0.18,  !- View Factor to Ground
 
     ,  !- Frame and Divider Name
     ,  !- Multiplier
