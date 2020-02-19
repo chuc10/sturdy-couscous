@@ -1324,19 +1324,19 @@ Output:Meter,
     2.997200000000;  !- Vertex 4 Z-coordinate {m}
 
   Shading:Zone:Detailed,
-    378EB3,  !- Name
-    9F49FB,  !- Base Surface Name
+    C05603,  !- Name
+    BB1F9A,  !- Base Surface Name
     ,  !- Transmittance Schedule Name
     4,  !- Number of Vertices
     17.659114000000,  !- Vertex 1 X-coordinate {m}
     0.382261000000,  !- Vertex 1 Y-coordinate {m}
-    2.465875300950,  !- Vertex 1 Z-coordinate {m}
+    1.074878874788,  !- Vertex 1 Z-coordinate {m}
     17.659114000000,  !- Vertex 2 X-coordinate {m}
     -0.227339000000,  !- Vertex 2 Y-coordinate {m}
-    2.465875300950,  !- Vertex 2 Z-coordinate {m}
-    7.299274051794,  !- Vertex 3 X-coordinate {m}
+    1.074878874788,  !- Vertex 2 Z-coordinate {m}
+    7.295914000000,  !- Vertex 3 X-coordinate {m}
     -0.227339000000,  !- Vertex 3 Y-coordinate {m}
-    2.465875300950,  !- Vertex 3 Z-coordinate {m}
-    7.299274051794,  !- Vertex 4 X-coordinate {m}
+    1.074878874788,  !- Vertex 3 Z-coordinate {m}
+    7.295914000000,  !- Vertex 4 X-coordinate {m}
     0.382261000000,  !- Vertex 4 Y-coordinate {m}
-    2.465875300950;  !- Vertex 4 Z-coordinate {m}
+    1.074878874788;  !- Vertex 4 Z-coordinate {m}
