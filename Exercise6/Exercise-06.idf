@@ -444,7 +444,7 @@ FenestrationSurface:Detailed,
     CCBE6D,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
-    ,  !- Shading Control Name
+
 
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
@@ -756,7 +756,7 @@ FenestrationSurface:Detailed,
     841F1E,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
-    ,  !- Shading Control Name
+
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
@@ -926,6 +926,13 @@ BuildingSurface:Detailed,
     0.382261000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
+    DaylightingDevice:Shelf,
+    Light Shelf, !- Name
+    862B9F, !- Window Name
+    , !- Inside Shelf Name
+    C05603, !- Outside Shelf Name
+    Light Exterior Wall; !- Outside Shelf Construction Name
+
 FenestrationSurface:Detailed,
     945D08,                  !- Name
     Window,                  !- Surface Type
@@ -933,7 +940,7 @@ FenestrationSurface:Detailed,
     EBAE82,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
-    ,  !- Shading Control Name
+
 
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
@@ -958,7 +965,7 @@ FenestrationSurface:Detailed,
     4C479C,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
-    ,  !- Shading Control Name
+
 
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
@@ -1302,11 +1309,11 @@ Output:Meter,
   FenestrationSurface:Detailed,
     862B9F,  !- Name
     Window,  !- Surface Type
-    ,  !- Construction Name
+    Double Pane Window,  !- Construction Name
     841F1E,  !- Building Surface Name
     ,  !- Outside Boundary Condition Object
     ,  !- View Factor to Ground
-    ,  !- Shading Control Name
+
     ,  !- Frame and Divider Name
     ,  !- Multiplier
     4,  !- Number of Vertices
