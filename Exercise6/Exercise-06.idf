@@ -1271,16 +1271,23 @@ ZoneCrossMixing,
     Zone C;                  !- Source Zone Name
 
 Output:Variable,
-    *,                       !- Key Value
+    Zone B,                       !- Key Value
     Zone Lights Electric Power,  !- Variable Name
     hourly;                  !- Reporting Frequency
 
 Output:Variable,
-    *,                       !- Key Value
+    Zone B,                       !- Key Value
     Zone Lights Electric Energy,  !- Variable Name
     hourly;                  !- Reporting Frequency
+    Output:Variable,
+        Zone C,                       !- Key Value
+        Zone Lights Electric Power,  !- Variable Name
+        hourly;                  !- Reporting Frequency
 
+    Output:Variable,
+        Zone C,                       !- Key Value
+        Zone Lights Electric Energy,  !- Variable Name
+        hourly;     
 Output:Meter,
     InteriorLights:Electricity,  !- Key Name
     hourly;                  !- Reporting Frequency
-
