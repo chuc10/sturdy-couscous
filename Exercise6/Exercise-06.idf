@@ -444,6 +444,8 @@ FenestrationSurface:Detailed,
     CCBE6D,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
+    ,  !- Shading Control Name
+
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
@@ -754,6 +756,7 @@ FenestrationSurface:Detailed,
     841F1E,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
+    ,  !- Shading Control Name
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
@@ -930,6 +933,8 @@ FenestrationSurface:Detailed,
     EBAE82,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
+    ,  !- Shading Control Name
+
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
@@ -953,6 +958,8 @@ FenestrationSurface:Detailed,
     4C479C,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
+    ,  !- Shading Control Name
+
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
@@ -1287,7 +1294,49 @@ Output:Variable,
     Output:Variable,
         Zone C,                       !- Key Value
         Zone Lights Electric Energy,  !- Variable Name
-        hourly;     
+        hourly;
 Output:Meter,
     InteriorLights:Electricity,  !- Key Name
     hourly;                  !- Reporting Frequency
+
+  FenestrationSurface:Detailed,
+    862B9F,  !- Name
+    Window,  !- Surface Type
+    ,  !- Construction Name
+    841F1E,  !- Building Surface Name
+    ,  !- Outside Boundary Condition Object
+    ,  !- View Factor to Ground
+    ,  !- Shading Control Name
+    ,  !- Frame and Divider Name
+    ,  !- Multiplier
+    4,  !- Number of Vertices
+    7.295914000000,  !- Vertex 1 X-coordinate {m}
+    0.382261000000,  !- Vertex 1 Y-coordinate {m}
+    2.997200000000,  !- Vertex 1 Z-coordinate {m}
+    7.295914000000,  !- Vertex 2 X-coordinate {m}
+    0.382261000000,  !- Vertex 2 Y-coordinate {m}
+    2.489200000000,  !- Vertex 2 Z-coordinate {m}
+    17.659114000000,  !- Vertex 3 X-coordinate {m}
+    0.382261000000,  !- Vertex 3 Y-coordinate {m}
+    2.489200000000,  !- Vertex 3 Z-coordinate {m}
+    17.659114000000,  !- Vertex 4 X-coordinate {m}
+    0.382261000000,  !- Vertex 4 Y-coordinate {m}
+    2.997200000000;  !- Vertex 4 Z-coordinate {m}
+
+  Shading:Zone:Detailed,
+    378EB3,  !- Name
+    9F49FB,  !- Base Surface Name
+    ,  !- Transmittance Schedule Name
+    4,  !- Number of Vertices
+    17.659114000000,  !- Vertex 1 X-coordinate {m}
+    0.382261000000,  !- Vertex 1 Y-coordinate {m}
+    2.465875300950,  !- Vertex 1 Z-coordinate {m}
+    17.659114000000,  !- Vertex 2 X-coordinate {m}
+    -0.227339000000,  !- Vertex 2 Y-coordinate {m}
+    2.465875300950,  !- Vertex 2 Z-coordinate {m}
+    7.299274051794,  !- Vertex 3 X-coordinate {m}
+    -0.227339000000,  !- Vertex 3 Y-coordinate {m}
+    2.465875300950,  !- Vertex 3 Z-coordinate {m}
+    7.299274051794,  !- Vertex 4 X-coordinate {m}
+    0.382261000000,  !- Vertex 4 Y-coordinate {m}
+    2.465875300950;  !- Vertex 4 Z-coordinate {m}
