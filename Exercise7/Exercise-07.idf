@@ -1199,6 +1199,46 @@ ZoneInfiltration:DesignFlowRate,
 
 
 
+ZoneControl:Thermostat,
+  ZONE A Thermostat,         !- Name
+  ZONE 1,                  !- Zone or ZoneList Name
+  Zone Control Type Schedule,  !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+  ZONE 1 SETPOINTS;        !- Control 1 Name
+
+    ThermostatSetpoint:DualSetpoint,
+      ZONE 1 SETPOINTS,        !- Name
+      ZONE Heating Setpoints,  !- Heating Setpoint Temperature Schedule Name
+      ZONE Cooling Setpoints;  !- Cooling Setpoint Temperature Schedule Name
+
+      SCHEDULE:COMPACT,
+        ZONE HEATING SETPOINTS,  !- Name
+        TEMPERATURE,             !- Schedule Type Limits Name
+        Through: 12/31,          !- Field 1
+        For: Weekdays WinterDesignDay, !- Field 2
+        Until: 7:00,15.60,       !- Field 3
+        Until: 17:00,19.40,      !- Field 5
+        Until: 24:00,15.60,      !- Field 7
+        For: AllOtherDays,       !- Field 9
+        Until: 24:00,15.60;      !- Field 10
+
+        SCHEDULE:COMPACT,
+          ZONE CONTROL TYPE SCHEDULE,  !- Name
+          CONTROLTYPE,             !- Schedule Type Limits Name
+          Through: 12/31,          !- Field 1
+          For: AllDays,            !- Field 2
+          Until: 24:00,4;          !- Field 3
+
+        SCHEDULE:COMPACT,
+          ZONE COOLING SETPOINTS,  !- Name
+          TEMPERATURE,             !- Schedule Type Limits Name
+          Through: 12/31,          !- Field 1
+          For: Weekdays SummerDesignDay, !- Field 2
+          Until: 7:00,100.00,      !- Field 3
+          Until: 17:00,26.10,      !- Field 5
+          Until: 24:00,100.00,     !- Field 7
+          For: AllOtherDays,       !- Field 9
+          Until: 24:00,100.00;     !- Field 10
 
 !
 !******** Simulation Output ********
