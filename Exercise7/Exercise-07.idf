@@ -1196,21 +1196,21 @@ ZoneInfiltration:DesignFlowRate,
 !
 
 ZoneControl:Thermostat,
-  ZONE A Thermostat,         !- Name
-  ZONE 1,                  !- Zone or ZoneList Name
+  Zone A Thermostat,         !- Name
+  Zone A,                  !- Zone or ZoneList Name
   Zone Control Type Schedule,  !- Control Type Schedule Name
   ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
-  ZONE 1 SETPOINTS;        !- Control 1 Name
+  Zone A SETPOINTS;        !- Control 1 Name
 
   SCHEDULE:COMPACT,
     ZONE CONTROL TYPE SCHEDULE,  !- Name
-    CONTROLTYPE,             !- Schedule Type Limits Name
+    CONTROL TYPE,             !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
     Until: 24:00,4;          !- Field 3
 
     ThermostatSetpoint:DualSetpoint,
-      ZONE 1 SETPOINTS,        !- Name
+      Zone A SETPOINTS,        !- Name
       ZONE Heating Setpoints,  !- Heating Setpoint Temperature Schedule Name
       ZONE Cooling Setpoints;  !- Cooling Setpoint Temperature Schedule Name
 
@@ -1243,12 +1243,56 @@ ZoneControl:Thermostat,
           !******** Zone A HVAC System ********
           !
           ZoneHVAC:EquipmentConnections,
-            ZONE 1,                  !- Zone Name
-            ZONE 1 EQUIPMENT,        !- Zone Conditioning Equipment List Name
-            ZONE 1 INLETS,           !- Zone Air Inlet Node or NodeList Name
-            ,                        !- Zone Air Exhaust Node or NodeList Name
-            ZONE 1 NODE,             !- Zone Air Node Name
-            ZONE 1 OUTLET;           !- Zone Return Air Node or NodeList Name
+            Zone A,                  !- Zone Name
+            Zone A EQUIPMENT,        !- Zone Conditioning Equipment List Name
+            Zone A INLET NODE,           !- Zone Air Inlet Node or NodeList Name
+            Zone A EXHAUST NODE,                        !- Zone Air Exhaust Node or NodeList Name
+            Zone A NODE,             !- Zone Air Node Name
+            Zone A OUTLET;           !- Zone Return Air Node or NodeList Name
+
+            ZoneHVAC:EquipmentList,
+              Zone A EQUIPMENT,        !- Name
+              SequentialLoad,          !- Load Distribution Scheme
+              ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+              Zone A Ideal Loads,      !- Zone Equipment 1 Name
+              1,                       !- Zone Equipment 1 Cooling Sequence
+              1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+              ,                        !- Zone Equipment 1 Sequential Cooling Load Fraction Schedule Name
+              ;                        !- Zone Equipment 1 Sequential Heating Load Fraction Schedule Name
+              ZoneHVAC:IdealLoadsAirSystem,
+                Zone A Ideal Loads,      !- Name
+                ,                        !- Availability Schedule Name
+                Zone A INLET NODE,           !- Zone Supply Air Node Name
+                ZONE A EXHAUST NODE,                        !- Zone Exhaust Air Node Name
+                ,                        !- System Inlet Air Node Name
+                50,                      !- Maximum Heating Supply Air Temperature {C}
+                13,                      !- Minimum Cooling Supply Air Temperature {C}
+                0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+                0.009,                   !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+                NoLimit,                 !- Heating Limit
+                autosize,                !- Maximum Heating Air Flow Rate {m3/s}
+                ,                        !- Maximum Sensible Heating Capacity {W}
+                NoLimit,                 !- Cooling Limit
+                autosize,                !- Maximum Cooling Air Flow Rate {m3/s}
+                ,                        !- Maximum Total Cooling Capacity {W}
+                ,                        !- Heating Availability Schedule Name
+                ,                        !- Cooling Availability Schedule Name
+                ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+                ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+                ConstantSupplyHumidityRatio,  !- Humidification Control Type
+                ,                        !- Design Specification Outdoor Air Object Name
+                ,                        !- Outdoor Air Inlet Node Name
+                ,                        !- Demand Controlled Ventilation Type
+                ,                        !- Outdoor Air Economizer Type
+                ,                        !- Heat Recovery Type
+                ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+                ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+
+
+
+
+
 
 !
 !******** Simulation Output ********
