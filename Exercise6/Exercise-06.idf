@@ -29,8 +29,8 @@ Building,
 GlobalGeometryRules,
     UpperLeftCorner,         !- Starting Vertex Position
     Counterclockwise,        !- Vertex Entry Direction
-    Relative,                !- Coordinate System
-    Relative,                !- Daylighting Reference Point Coordinate System
+    Absolute,                !- Coordinate System
+    Absolute,                !- Daylighting Reference Point Coordinate System
     Relative;                !- Rectangular Surface Coordinate System
 
 RunPeriod,
@@ -304,17 +304,17 @@ BuildingSurface:Detailed,
     NoWind,                  !- Wind Exposure
     0.0,                     !- View Factor to Ground
     4,                       !- Number of Vertices
-    6.381514000000,          !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    7.481270000000,          !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     0.000000000000,          !- Vertex 1 Z-coordinate {m}
-    6.381514000000,          !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    7.481270000000,          !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    0.285514000000,          !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    1.385270000000,          !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    0.285514000000,          !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    1.385270000000,          !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     0.000000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -328,17 +328,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    0.285514000000,          !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    1.385270000000,          !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    0.285514000000,          !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    1.385270000000,          !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    6.381514000000,          !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    7.481270000000,          !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    6.381514000000,          !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    7.481270000000,          !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -352,17 +352,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    0.285514000000,          !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    1.385270000000,          !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    0.285514000000,          !- Vertex 2 X-coordinate {m}
-    6.478261000000,          !- Vertex 2 Y-coordinate {m}
+    1.385270000000,          !- Vertex 2 X-coordinate {m}
+    7.950519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    0.285514000000,          !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    1.385270000000,          !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    0.285514000000,          !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    1.385270000000,          !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -376,17 +376,17 @@ BuildingSurface:Detailed,
     NoWind,                  !- Wind Exposure
     0.0,                     !- View Factor to Ground
     4,                       !- Number of Vertices
-    6.381514000000,          !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    7.481270000000,          !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    6.381514000000,          !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    7.481270000000,          !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    6.381514000000,          !- Vertex 3 X-coordinate {m}
-    6.478261000000,          !- Vertex 3 Y-coordinate {m}
+    7.481270000000,          !- Vertex 3 X-coordinate {m}
+    7.950519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    6.381514000000,          !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    7.481270000000,          !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -400,17 +400,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    6.381514000000,          !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    7.481270000000,          !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    6.381514000000,          !- Vertex 2 X-coordinate {m}
-    6.478261000000,          !- Vertex 2 Y-coordinate {m}
+    7.481270000000,          !- Vertex 2 X-coordinate {m}
+    7.950519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    0.285514000000,          !- Vertex 3 X-coordinate {m}
-    6.478261000000,          !- Vertex 3 Y-coordinate {m}
+    1.385270000000,          !- Vertex 3 X-coordinate {m}
+    7.950519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    0.285514000000,          !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    1.385270000000,          !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -424,17 +424,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    0.285514000000,          !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    1.385270000000,          !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    0.285514000000,          !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    1.385270000000,          !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     3.048000000000,          !- Vertex 2 Z-coordinate {m}
-    6.381514000000,          !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    7.481270000000,          !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     3.048000000000,          !- Vertex 3 Z-coordinate {m}
-    6.381514000000,          !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    7.481270000000,          !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 FenestrationSurface:Detailed,
@@ -444,22 +444,22 @@ FenestrationSurface:Detailed,
     CCBE6D,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
-
+    ,  !- Shading Control Name
 
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    1.199914000000,          !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    2.299670000000,          !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     2.438400000000,          !- Vertex 1 Z-coordinate {m}
-    1.199914000000,          !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    2.299670000000,          !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     1.219200000000,          !- Vertex 2 Z-coordinate {m}
-    5.467114000000,          !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    6.566870000000,          !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     1.219200000000,          !- Vertex 3 Z-coordinate {m}
-    5.467114000000,          !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    6.566870000000,          !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     2.438400000000;          !- Vertex 4 Z-coordinate {m}
 
 Shading:Building:Detailed,
@@ -616,17 +616,17 @@ BuildingSurface:Detailed,
     NoWind,                  !- Wind Exposure
     0.0,                     !- View Factor to Ground
     4,                       !- Number of Vertices
-    18.573514000000,         !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    19.673270000000,         !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     0.000000000000,          !- Vertex 1 Z-coordinate {m}
-    18.573514000000,         !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    19.673270000000,         !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    6.381514000000,          !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    7.481270000000,          !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    6.381514000000,          !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    7.481270000000,          !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     0.000000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -640,17 +640,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    6.381514000000,          !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    7.481270000000,          !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    6.381514000000,          !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    7.481270000000,          !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    18.573514000000,         !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    19.673270000000,         !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    18.573514000000,         !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    19.673270000000,         !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -664,17 +664,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    6.381514000000,          !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    7.481270000000,          !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    6.381514000000,          !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    7.481270000000,          !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     3.048000000000,          !- Vertex 2 Z-coordinate {m}
-    18.573514000000,         !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    19.673270000000,         !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     3.048000000000,          !- Vertex 3 Z-coordinate {m}
-    18.573514000000,         !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    19.673270000000,         !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -688,17 +688,17 @@ BuildingSurface:Detailed,
     NoWind,                  !- Wind Exposure
     0.0,                     !- View Factor to Ground
     4,                       !- Number of Vertices
-    18.573514000000,         !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    19.673270000000,         !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    18.573514000000,         !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    19.673270000000,         !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    18.573514000000,         !- Vertex 3 X-coordinate {m}
-    6.478261000000,          !- Vertex 3 Y-coordinate {m}
+    19.673270000000,         !- Vertex 3 X-coordinate {m}
+    7.950519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    18.573514000000,         !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    19.673270000000,         !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -712,17 +712,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    18.573514000000,         !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    19.673270000000,         !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    18.573514000000,         !- Vertex 2 X-coordinate {m}
-    6.478261000000,          !- Vertex 2 Y-coordinate {m}
+    19.673270000000,         !- Vertex 2 X-coordinate {m}
+    7.950519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    6.381514000000,          !- Vertex 3 X-coordinate {m}
-    6.478261000000,          !- Vertex 3 Y-coordinate {m}
+    7.481270000000,          !- Vertex 3 X-coordinate {m}
+    7.950519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    6.381514000000,          !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    7.481270000000,          !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -736,17 +736,17 @@ BuildingSurface:Detailed,
     NoWind,                  !- Wind Exposure
     0.0,                     !- View Factor to Ground
     4,                       !- Number of Vertices
-    6.381514000000,          !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    7.481270000000,          !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    6.381514000000,          !- Vertex 2 X-coordinate {m}
-    6.478261000000,          !- Vertex 2 Y-coordinate {m}
+    7.481270000000,          !- Vertex 2 X-coordinate {m}
+    7.950519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    6.381514000000,          !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    7.481270000000,          !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    6.381514000000,          !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    7.481270000000,          !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 FenestrationSurface:Detailed,
@@ -756,21 +756,21 @@ FenestrationSurface:Detailed,
     841F1E,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
-
+    ,  !- Shading Control Name
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    7.295914000000,          !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    8.395670000000,          !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     2.438400000000,          !- Vertex 1 Z-coordinate {m}
-    7.295914000000,          !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    8.395670000000,          !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     1.219200000000,          !- Vertex 2 Z-coordinate {m}
-    17.659114000000,         !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    18.758870000000,         !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     1.219200000000,          !- Vertex 3 Z-coordinate {m}
-    17.659114000000,         !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    18.758870000000,         !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     2.438400000000;          !- Vertex 4 Z-coordinate {m}
 
 Zone,
@@ -793,17 +793,17 @@ BuildingSurface:Detailed,
     NoWind,                  !- Wind Exposure
     0.0,                     !- View Factor to Ground
     4,                       !- Number of Vertices
-    24.669514000000,         !- Vertex 1 X-coordinate {m}
-    12.574261000000,         !- Vertex 1 Y-coordinate {m}
+    25.769270000000,         !- Vertex 1 X-coordinate {m}
+    14.046519000000,         !- Vertex 1 Y-coordinate {m}
     0.000000000000,          !- Vertex 1 Z-coordinate {m}
-    24.669514000000,         !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    25.769270000000,         !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    18.573514000000,         !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    19.673270000000,         !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    18.573514000000,         !- Vertex 4 X-coordinate {m}
-    12.574261000000,         !- Vertex 4 Y-coordinate {m}
+    19.673270000000,         !- Vertex 4 X-coordinate {m}
+    14.046519000000,         !- Vertex 4 Y-coordinate {m}
     0.000000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -817,17 +817,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    18.573514000000,         !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    19.673270000000,         !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    18.573514000000,         !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    19.673270000000,         !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    24.669514000000,         !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    25.769270000000,         !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    24.669514000000,         !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    25.769270000000,         !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -841,17 +841,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    18.573514000000,         !- Vertex 1 X-coordinate {m}
-    12.574261000000,         !- Vertex 1 Y-coordinate {m}
+    19.673270000000,         !- Vertex 1 X-coordinate {m}
+    14.046519000000,         !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    18.573514000000,         !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    19.673270000000,         !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     3.048000000000,          !- Vertex 2 Z-coordinate {m}
-    24.669514000000,         !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    25.769270000000,         !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     3.048000000000,          !- Vertex 3 Z-coordinate {m}
-    24.669514000000,         !- Vertex 4 X-coordinate {m}
-    12.574261000000,         !- Vertex 4 Y-coordinate {m}
+    25.769270000000,         !- Vertex 4 X-coordinate {m}
+    14.046519000000,         !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -865,17 +865,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    24.669514000000,         !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    25.769270000000,         !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    24.669514000000,         !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    25.769270000000,         !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    24.669514000000,         !- Vertex 3 X-coordinate {m}
-    12.574261000000,         !- Vertex 3 Y-coordinate {m}
+    25.769270000000,         !- Vertex 3 X-coordinate {m}
+    14.046519000000,         !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    24.669514000000,         !- Vertex 4 X-coordinate {m}
-    12.574261000000,         !- Vertex 4 Y-coordinate {m}
+    25.769270000000,         !- Vertex 4 X-coordinate {m}
+    14.046519000000,         !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -889,17 +889,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    24.669514000000,         !- Vertex 1 X-coordinate {m}
-    12.574261000000,         !- Vertex 1 Y-coordinate {m}
+    25.769270000000,         !- Vertex 1 X-coordinate {m}
+    14.046519000000,         !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    24.669514000000,         !- Vertex 2 X-coordinate {m}
-    12.574261000000,         !- Vertex 2 Y-coordinate {m}
+    25.769270000000,         !- Vertex 2 X-coordinate {m}
+    14.046519000000,         !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    18.573514000000,         !- Vertex 3 X-coordinate {m}
-    12.574261000000,         !- Vertex 3 Y-coordinate {m}
+    19.673270000000,         !- Vertex 3 X-coordinate {m}
+    14.046519000000,         !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    18.573514000000,         !- Vertex 4 X-coordinate {m}
-    12.574261000000,         !- Vertex 4 Y-coordinate {m}
+    19.673270000000,         !- Vertex 4 X-coordinate {m}
+    14.046519000000,         !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -913,17 +913,17 @@ BuildingSurface:Detailed,
     NoWind,                  !- Wind Exposure
     0.0,                     !- View Factor to Ground
     4,                       !- Number of Vertices
-    18.573514000000,         !- Vertex 1 X-coordinate {m}
-    6.478261000000,          !- Vertex 1 Y-coordinate {m}
+    19.673270000000,         !- Vertex 1 X-coordinate {m}
+    7.950519000000,          !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    18.573514000000,         !- Vertex 2 X-coordinate {m}
-    6.478261000000,          !- Vertex 2 Y-coordinate {m}
+    19.673270000000,         !- Vertex 2 X-coordinate {m}
+    7.950519000000,          !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    18.573514000000,         !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    19.673270000000,         !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    18.573514000000,         !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    19.673270000000,         !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
     DaylightingDevice:Shelf,
@@ -940,22 +940,22 @@ FenestrationSurface:Detailed,
     EBAE82,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
-
+    ,  !- Shading Control Name
 
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    19.487914000000,         !- Vertex 1 X-coordinate {m}
-    0.382261000000,          !- Vertex 1 Y-coordinate {m}
+    20.587670000000,         !- Vertex 1 X-coordinate {m}
+    1.854519000000,          !- Vertex 1 Y-coordinate {m}
     2.438400000000,          !- Vertex 1 Z-coordinate {m}
-    19.487914000000,         !- Vertex 2 X-coordinate {m}
-    0.382261000000,          !- Vertex 2 Y-coordinate {m}
+    20.587670000000,         !- Vertex 2 X-coordinate {m}
+    1.854519000000,          !- Vertex 2 Y-coordinate {m}
     1.219200000000,          !- Vertex 2 Z-coordinate {m}
-    23.755114000000,         !- Vertex 3 X-coordinate {m}
-    0.382261000000,          !- Vertex 3 Y-coordinate {m}
+    24.854870000000,         !- Vertex 3 X-coordinate {m}
+    1.854519000000,          !- Vertex 3 Y-coordinate {m}
     1.219200000000,          !- Vertex 3 Z-coordinate {m}
-    23.755114000000,         !- Vertex 4 X-coordinate {m}
-    0.382261000000,          !- Vertex 4 Y-coordinate {m}
+    24.854870000000,         !- Vertex 4 X-coordinate {m}
+    1.854519000000,          !- Vertex 4 Y-coordinate {m}
     2.438400000000;          !- Vertex 4 Z-coordinate {m}
 
 FenestrationSurface:Detailed,
@@ -965,22 +965,22 @@ FenestrationSurface:Detailed,
     4C479C,                  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
-
+    ,  !- Shading Control Name
 
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    24.669514000000,         !- Vertex 1 X-coordinate {m}
-    1.296661000000,          !- Vertex 1 Y-coordinate {m}
+    25.769270000000,         !- Vertex 1 X-coordinate {m}
+    2.768919000000,          !- Vertex 1 Y-coordinate {m}
     2.438400000000,          !- Vertex 1 Z-coordinate {m}
-    24.669514000000,         !- Vertex 2 X-coordinate {m}
-    1.296661000000,          !- Vertex 2 Y-coordinate {m}
+    25.769270000000,         !- Vertex 2 X-coordinate {m}
+    2.768919000000,          !- Vertex 2 Y-coordinate {m}
     1.219200000000,          !- Vertex 2 Z-coordinate {m}
-    24.669514000000,         !- Vertex 3 X-coordinate {m}
-    11.659861000000,         !- Vertex 3 Y-coordinate {m}
+    25.769270000000,         !- Vertex 3 X-coordinate {m}
+    13.132119000000,         !- Vertex 3 Y-coordinate {m}
     1.219200000000,          !- Vertex 3 Z-coordinate {m}
-    24.669514000000,         !- Vertex 4 X-coordinate {m}
-    11.659861000000,         !- Vertex 4 Y-coordinate {m}
+    25.769270000000,         !- Vertex 4 X-coordinate {m}
+    13.132119000000,         !- Vertex 4 Y-coordinate {m}
     2.438400000000;          !- Vertex 4 Z-coordinate {m}
 
 BuildingSurface:Detailed,
@@ -994,17 +994,17 @@ BuildingSurface:Detailed,
     WindExposed,             !- Wind Exposure
     ,                        !- View Factor to Ground
     4,                       !- Number of Vertices
-    18.573514000000,         !- Vertex 1 X-coordinate {m}
-    12.574261000000,         !- Vertex 1 Y-coordinate {m}
+    19.673270000000,         !- Vertex 1 X-coordinate {m}
+    14.046519000000,         !- Vertex 1 Y-coordinate {m}
     3.048000000000,          !- Vertex 1 Z-coordinate {m}
-    18.573514000000,         !- Vertex 2 X-coordinate {m}
-    12.574261000000,         !- Vertex 2 Y-coordinate {m}
+    19.673270000000,         !- Vertex 2 X-coordinate {m}
+    14.046519000000,         !- Vertex 2 Y-coordinate {m}
     0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    18.573514000000,         !- Vertex 3 X-coordinate {m}
-    6.478261000000,          !- Vertex 3 Y-coordinate {m}
+    19.673270000000,         !- Vertex 3 X-coordinate {m}
+    7.950519000000,          !- Vertex 3 Y-coordinate {m}
     0.000000000000,          !- Vertex 3 Z-coordinate {m}
-    18.573514000000,         !- Vertex 4 X-coordinate {m}
-    6.478261000000,          !- Vertex 4 Y-coordinate {m}
+    19.673270000000,         !- Vertex 4 X-coordinate {m}
+    7.950519000000,          !- Vertex 4 Y-coordinate {m}
     3.048000000000;          !- Vertex 4 Z-coordinate {m}
 
 ElectricEquipment,
@@ -1313,21 +1313,21 @@ Output:Meter,
     841F1E,  !- Building Surface Name
     ,  !- Outside Boundary Condition Object
     0.18,  !- View Factor to Ground
-
+    ,  !- Shading Control Name
     ,  !- Frame and Divider Name
     ,  !- Multiplier
     4,  !- Number of Vertices
-    7.295914000000,  !- Vertex 1 X-coordinate {m}
-    0.382261000000,  !- Vertex 1 Y-coordinate {m}
+    8.395670000000,  !- Vertex 1 X-coordinate {m}
+    1.854519000000,  !- Vertex 1 Y-coordinate {m}
     2.997200000000,  !- Vertex 1 Z-coordinate {m}
-    7.295914000000,  !- Vertex 2 X-coordinate {m}
-    0.382261000000,  !- Vertex 2 Y-coordinate {m}
+    8.395670000000,  !- Vertex 2 X-coordinate {m}
+    1.854519000000,  !- Vertex 2 Y-coordinate {m}
     2.489200000000,  !- Vertex 2 Z-coordinate {m}
-    17.659114000000,  !- Vertex 3 X-coordinate {m}
-    0.382261000000,  !- Vertex 3 Y-coordinate {m}
+    18.758870000000,  !- Vertex 3 X-coordinate {m}
+    1.854519000000,  !- Vertex 3 Y-coordinate {m}
     2.489200000000,  !- Vertex 3 Z-coordinate {m}
-    17.659114000000,  !- Vertex 4 X-coordinate {m}
-    0.382261000000,  !- Vertex 4 Y-coordinate {m}
+    18.758870000000,  !- Vertex 4 X-coordinate {m}
+    1.854519000000,  !- Vertex 4 Y-coordinate {m}
     2.997200000000;  !- Vertex 4 Z-coordinate {m}
 
   Shading:Zone:Detailed,
@@ -1335,15 +1335,15 @@ Output:Meter,
     BB1F9A,  !- Base Surface Name
     ,  !- Transmittance Schedule Name
     4,  !- Number of Vertices
-    17.659114000000,  !- Vertex 1 X-coordinate {m}
-    0.382261000000,  !- Vertex 1 Y-coordinate {m}
+    18.758870000000,  !- Vertex 1 X-coordinate {m}
+    1.854519000000,  !- Vertex 1 Y-coordinate {m}
     2.489200000000,  !- Vertex 1 Z-coordinate {m}
-    17.659114000000,  !- Vertex 2 X-coordinate {m}
-    -0.227339000000,  !- Vertex 2 Y-coordinate {m}
+    18.758870000000,  !- Vertex 2 X-coordinate {m}
+    1.244919000000,  !- Vertex 2 Y-coordinate {m}
     2.489200000000,  !- Vertex 2 Z-coordinate {m}
-    7.295914000000,  !- Vertex 3 X-coordinate {m}
-    -0.227339000000,  !- Vertex 3 Y-coordinate {m}
+    8.395670000000,  !- Vertex 3 X-coordinate {m}
+    1.244919000000,  !- Vertex 3 Y-coordinate {m}
     2.489200000000,  !- Vertex 3 Z-coordinate {m}
-    7.295914000000,  !- Vertex 4 X-coordinate {m}
-    0.382261000000,  !- Vertex 4 Y-coordinate {m}
+    8.395670000000,  !- Vertex 4 X-coordinate {m}
+    1.854519000000,  !- Vertex 4 Y-coordinate {m}
     2.489200000000;  !- Vertex 4 Z-coordinate {m}
