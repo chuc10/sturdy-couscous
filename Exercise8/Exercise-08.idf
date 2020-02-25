@@ -1500,41 +1500,12 @@ ZoneHVAC:EquipmentConnections,
 ZoneHVAC:EquipmentList,
     Zone A HVAC Equipment,   !- Name
     SequentialLoad,          !- Load Distribution Scheme
-    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    ZoneHVAC:Baseboard:Convective:Electric,  !- Zone Equipment 1 Object Type
     Zone A Loads,            !- Zone Equipment 1 Name
-    1,                       !- Zone Equipment 1 Cooling Sequence
+    2,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
     ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
-
-ZoneHVAC:IdealLoadsAirSystem,
-    Zone A Loads,            !- Name
-    Always On,               !- Availability Schedule Name
-    Zone A Inlet Node,       !- Zone Supply Air Node Name
-    ,                        !- Zone Exhaust Air Node Name
-    ,                        !- System Inlet Air Node Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.010,                   !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    autosize,                !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    autosize,                !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    Always On,               !- Heating Availability Schedule Name
-    Always On,               !- Cooling Availability Schedule Name
-    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
-    0.7,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ConstantSupplyHumidityRatio,  !- Humidification Control Type
-    ,                        !- Design Specification Outdoor Air Object Name
-    ,                        !- Outdoor Air Inlet Node Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
 
 !
 !******** Zone B HVAC System ********
@@ -1678,4 +1649,14 @@ Output:Variable,
     *,                       !- Key Value
     Zone Mean Air Temperature,  !- Variable Name
     hourly;                  !- Reporting Frequency
+
+ZoneHVAC:Baseboard:RadiantConvective:Electric,
+    Zone A Baseboard,        !- Name
+    Always On,               !- Availability Schedule Name
+    HeatingDesignCapacity,   !- Heating Design Capacity Method
+    autosize,                !- Heating Design Capacity {W}
+    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
+    0,                       !- Fraction of Autosized Heating Design Capacity
+    1,                       !- Efficiency
+    ;                        !- Fraction Radiant
 
