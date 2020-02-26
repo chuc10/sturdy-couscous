@@ -13,6 +13,7 @@
 Version,
     9.2;                     !- Version Identifier
 
+
 Timestep,
     6;                       !- Number of Timesteps per Hour
 
@@ -1493,7 +1494,7 @@ ZoneHVAC:EquipmentConnections,
     Zone A,                  !- Zone Name
     Zone A HVAC Equipment,   !- Zone Conditioning Equipment List Name
     Zone A Inlet Node,       !- Zone Air Inlet Node or NodeList Name
-    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone A Exhaust Node,                        !- Zone Air Exhaust Node or NodeList Name
     Zone A Air Node,         !- Zone Air Node Name
     Zone A Return Node;      !- Zone Return Air Node or NodeList Name
 
@@ -1501,13 +1502,50 @@ ZoneHVAC:EquipmentList,
     Zone A HVAC Equipment,   !- Name
     SequentialLoad,          !- Load Distribution Scheme
     ZoneHVAC:Baseboard:Convective:Electric,  !- Zone Equipment 1 Object Type
-    Zone A Loads,            !- Zone Equipment 1 Name
+    Zone A Baseboard,            !- Zone Equipment 1 Name
     2,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
     ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
 
-!
+!      ZoneHVAC:WindowAirConditioner,
+        Zone A WindAC,             !- Name
+        CoolingCoilAvailSched,   !- Availability Schedule Name
+        0.6,                     !- Maximum Supply Air Flow Rate {m3/s}
+        0.0,                     !- Maximum Outdoor Air Flow Rate {m3/s}
+        Zone A WindACAirInletNode, !- Air Inlet Node Name
+        Zone A WindACAirOutletNode,!- Air Outlet Node Name
+        OutdoorAir:Mixer,        !- Outdoor Air Mixer Object Type
+        Zone A WindACOAMixer,      !- Outdoor Air Mixer Name
+        Fan:OnOff,               !- Supply Air Fan Object Type
+        Zone A WindACFan,          !- Supply Air Fan Name
+        Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
+        Zone A WindACDXCoil,       !- DX Cooling Coil Name
+        Always Off,           !- Supply Air Fan Operating Mode Schedule Name
+        BlowThrough,             !- Fan Placement
+        0.001;                   !- Cooling Convergence Tolerance
+        OutdoorAir:Node,
+          Zone A WindACOAInNode; !-Name
+        OutdoorAir:Mixer,
+          Zone A WindACOAMixer,      !- Name
+          Zone A WindACOAMixerOutletNode,  !- Mixed Air Node Name
+          Zone A WindACOAInNode,     !- Outdoor Air Stream Node Name
+          Zone A WindACExhNode,      !- Relief Air Stream Node Name
+          Zone A WindACAirInletNode; !- Return Air Stream Node Name
+
+          Fan:OnOff,
+            Zone A WindACFan,          !- Name
+            FanAndCoilAvailSched,    !- Availability Schedule Name
+            0.5,                     !- Fan Total Efficiency
+            75.0,                    !- Pressure Rise {Pa}
+            0.6,                     !- Maximum Flow Rate {m3/s}
+            0.9,                     !- Motor Efficiency
+            1.0,                     !- Motor In Airstream Fraction
+            Zone A WindACOAMixerOutletNode,  !- Air Inlet Node Name
+            Zone A WindACFanOutletNode;!- Air Outlet Node Name
+
+
+
 !******** Zone B HVAC System ********
 !
 ZoneHVAC:EquipmentConnections,
@@ -1659,4 +1697,3 @@ ZoneHVAC:Baseboard:RadiantConvective:Electric,
     0,                       !- Fraction of Autosized Heating Design Capacity
     1,                       !- Efficiency
     ;                        !- Fraction Radiant
-
