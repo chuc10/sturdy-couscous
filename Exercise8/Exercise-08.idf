@@ -13,7 +13,6 @@
 Version,
     9.2;                     !- Version Identifier
 
-
 Timestep,
     6;                       !- Number of Timesteps per Hour
 
@@ -1494,7 +1493,7 @@ ZoneHVAC:EquipmentConnections,
     Zone A,                  !- Zone Name
     Zone A HVAC Equipment,   !- Zone Conditioning Equipment List Name
     Zone A Inlet Node,       !- Zone Air Inlet Node or NodeList Name
-    Zone A Exhaust Node,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone A Exhaust Node,     !- Zone Air Exhaust Node or NodeList Name
     Zone A Air Node,         !- Zone Air Node Name
     Zone A Return Node;      !- Zone Return Air Node or NodeList Name
 
@@ -1502,47 +1501,71 @@ ZoneHVAC:EquipmentList,
     Zone A HVAC Equipment,   !- Name
     SequentialLoad,          !- Load Distribution Scheme
     ZoneHVAC:Baseboard:Convective:Electric,  !- Zone Equipment 1 Object Type
-    Zone A Baseboard,            !- Zone Equipment 1 Name
+    Zone A Baseboard,        !- Zone Equipment 1 Name
     2,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+    ,                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+    ZoneHVAC:WindowAirConditioner,  !- Zone Equipment 2 Object Type
+    Zone A WindAC,           !- Zone Equipment 2 Name
+    1,                       !- Zone Equipment 2 Cooling Sequence
+    2;                       !- Zone Equipment 2 Heating or No-Load Sequence
 
-!      ZoneHVAC:WindowAirConditioner,
-        Zone A WindAC,             !- Name
-        CoolingCoilAvailSched,   !- Availability Schedule Name
-        0.6,                     !- Maximum Supply Air Flow Rate {m3/s}
-        0.0,                     !- Maximum Outdoor Air Flow Rate {m3/s}
-        Zone A WindACAirInletNode, !- Air Inlet Node Name
-        Zone A WindACAirOutletNode,!- Air Outlet Node Name
-        OutdoorAir:Mixer,        !- Outdoor Air Mixer Object Type
-        Zone A WindACOAMixer,      !- Outdoor Air Mixer Name
-        Fan:OnOff,               !- Supply Air Fan Object Type
-        Zone A WindACFan,          !- Supply Air Fan Name
-        Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
-        Zone A WindACDXCoil,       !- DX Cooling Coil Name
-        Always Off,           !- Supply Air Fan Operating Mode Schedule Name
-        BlowThrough,             !- Fan Placement
-        0.001;                   !- Cooling Convergence Tolerance
-        OutdoorAir:Node,
-          Zone A WindACOAInNode; !-Name
-        OutdoorAir:Mixer,
-          Zone A WindACOAMixer,      !- Name
-          Zone A WindACOAMixerOutletNode,  !- Mixed Air Node Name
-          Zone A WindACOAInNode,     !- Outdoor Air Stream Node Name
-          Zone A WindACExhNode,      !- Relief Air Stream Node Name
-          Zone A WindACAirInletNode; !- Return Air Stream Node Name
+ZoneHVAC:WindowAirConditioner,
+    Zone A WindAC,           !- Name
+    CoolingCoilAvailSched,   !- Availability Schedule Name
+    Autosize,                     !- Maximum Supply Air Flow Rate {m3/s}
+    Autosize,                     !- Maximum Outdoor Air Flow Rate {m3/s}
+    Zone A Exhaust Node,     !- Air Inlet Node Name
+    Zone A Inlet Node,       !- Air Outlet Node Name
+    OutdoorAir:Mixer,        !- Outdoor Air Mixer Object Type
+    Zone A WindACOAMixer,    !- Outdoor Air Mixer Name
+    Fan:OnOff,               !- Supply Air Fan Object Type
+    Zone A WindACFan,        !- Supply Air Fan Name
+    Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
+    Zone A WindACDXCoil,     !- DX Cooling Coil Name
+    Always Off,              !- Supply Air Fan Operating Mode Schedule Name
+    BlowThrough,             !- Fan Placement
+    0.001;                   !- Cooling Convergence Tolerance
+OutdoorAir:Node,
+    Zone A WindACOAInNode;   !- Name
 
-          Fan:OnOff,
-            Zone A WindACFan,          !- Name
-            FanAndCoilAvailSched,    !- Availability Schedule Name
-            0.5,                     !- Fan Total Efficiency
-            75.0,                    !- Pressure Rise {Pa}
-            0.6,                     !- Maximum Flow Rate {m3/s}
-            0.9,                     !- Motor Efficiency
-            1.0,                     !- Motor In Airstream Fraction
-            Zone A WindACOAMixerOutletNode,  !- Air Inlet Node Name
-            Zone A WindACFanOutletNode;!- Air Outlet Node Name
+OutdoorAir:Mixer,
+    Zone A WindACOAMixer,    !- Name
+    Zone A WindACOAMixerOutletNode,  !- Mixed Air Node Name
+    Zone A WindACOAInNode,   !- Outdoor Air Stream Node Name
+    Zone A WindACExhNode,    !- Relief Air Stream Node Name
+    Zone A Exhaust Node;     !- Return Air Stream Node Name
+
+Fan:OnOff,
+    Zone A WindACFan,        !- Name
+    Always On,    !- Availability Schedule Name
+    0.5,                     !- Fan Total Efficiency
+    75.0,                    !- Pressure Rise {Pa}
+    Autosize,                     !- Maximum Flow Rate {m3/s}
+    0.9,                     !- Motor Efficiency
+    1.0,                     !- Motor In Airstream Fraction
+    Zone A WindACOAMixerOutletNode,  !- Air Inlet Node Name
+    Zone A WindACFanOutletNode;  !- Air Outlet Node Name
+
+    Schedule:Compact,
+      CoolingCoilAvailSched,   !- Name
+      Fraction,                !- Schedule Type Limits Name
+      Through: 3/31,           !- Field 1
+      For: AllDays,            !- Field 2
+      Until: 24:00,0.0,        !- Field 3
+      Through: 9/30,           !- Field 5
+      For: WeekDays SummerDesignDay, !- Field 6
+      Until: 7:00,0.0,         !- Field 7
+      Until: 17:00,1.0,        !- Field 9
+      Until: 24:00,0.0,        !- Field 11
+      For: WinterDesignDay,    !- Field 13
+      Until: 24:00,0.0,        !- Field 14
+      For: AllOtherDays,       !- Field 16
+      Until: 24:00,0.0,        !- Field 17
+      Through: 12/31,          !- Field 19
+      For: AllDays,            !- Field 20
+      Until: 24:00,0.0;        !- Field 21
 
 
 
@@ -1661,7 +1684,8 @@ OutputControl:Table:Style,
 Output:Table:SummaryReports,
     EnvelopeSummary,         !- Report 1 Name
     AnnualBuildingUtilityPerformanceSummary,  !- Report 2 Name
-    HVACSizingSummary;       !- Report 3 Name
+    HVACSizingSummary,
+    ComponentSizingSummary;       !- Report 3 Name
 
 Output:Variable,
     *,                       !- Key Value
@@ -1688,12 +1712,52 @@ Output:Variable,
     Zone Mean Air Temperature,  !- Variable Name
     hourly;                  !- Reporting Frequency
 
-ZoneHVAC:Baseboard:RadiantConvective:Electric,
+ZoneHVAC:Baseboard:Convective:Electric,
     Zone A Baseboard,        !- Name
     Always On,               !- Availability Schedule Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
     autosize,                !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     0,                       !- Fraction of Autosized Heating Design Capacity
-    1,                       !- Efficiency
-    ;                        !- Fraction Radiant
+    1;                       !- Efficiency
+
+Coil:Cooling:DX:SingleSpeed,
+    Zone A WindACDXCoil,     !- Name
+    Always On,               !- Availability Schedule Name
+    Autosize,            !- Gross Rated Total Cooling Capacity {W}
+    Autosize,                    !- Gross Rated Sensible Heat Ratio
+    3,                       !- Gross Rated Cooling COP {W/W}
+    Autosize,                        !- Rated Air Flow Rate {m3/s}
+    ,                   !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
+    Zone A WindACFanOutletNode,  !- Air Inlet Node Name
+    Zone A Inlet Node,       !- Air Outlet Node Name
+    WindACCoolCapFT,         !- Total Cooling Capacity Function of Temperature Curve Name
+    WindACCoolCapFFF,        !- Total Cooling Capacity Function of Flow Fraction Curve Name
+    WindACEIRFT,             !- Energy Input Ratio Function of Temperature Curve Name
+    WindACCoolCapFFF,        !- Energy Input Ratio Function of Flow Fraction Curve Name
+    WindACPLFFPLR,           !- Part Load Fraction Correlation Curve Name
+    -25,                     !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
+    ,                        !- Nominal Time for Condensate Removal to Begin {s}
+    ,                        !- Ratio of Initial Moisture Evaporation Rate and Steady State Latent Capacity {dimensionless}
+    ,                        !- Maximum Cycling Rate {cycles/hr}
+    ,                        !- Latent Capacity Time Constant {s}
+    ,                        !- Condenser Air Inlet Node Name
+    AirCooled,               !- Condenser Type
+    0.9,                     !- Evaporative Condenser Effectiveness {dimensionless}
+    ,                        !- Evaporative Condenser Air Flow Rate {m3/s}
+    ,                        !- Evaporative Condenser Pump Rated Power Consumption {W}
+    ,                        !- Crankcase Heater Capacity {W}
+    10,                      !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation {C}
+    ,                        !- Supply Water Storage Tank Name
+    ,                        !- Condensate Collection Water Storage Tank Name
+    ,                        !- Basin Heater Capacity {W/K}
+    2,                       !- Basin Heater Setpoint Temperature {C}
+    ,                        !- Basin Heater Operating Schedule Name
+    ,                        !- Sensible Heat Ratio Function of Temperature Curve Name
+    ,                        !- Sensible Heat Ratio Function of Flow Fraction Curve Name
+    No;                      !- Report ASHRAE Standard 127 Performance Ratings
+
+    Output:Variable,*,Zone Air System Sensible Heating Rate,hourly; !- HVA
+    Output:Variable,*,Zone Air System Sensible Cooling Rate,hourly; !- HVA
+    Output:Variable,*,Zone Window Air Conditioner Total Cooling Rate,hourly;
+    Output:Variable,*,Baseboard Total Heating Rate,hourly; !- HVAC Average
